@@ -26,5 +26,6 @@ func (a *APIRouter) PostPasswordRecommendationStep() gin.HandlerFunc {
 		}
 
 		c.JSON(http.StatusOK, response)
+		services.LogRequestResponse(request, response)
 	}
 }

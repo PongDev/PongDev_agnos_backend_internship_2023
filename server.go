@@ -15,5 +15,6 @@ func main() {
 
 	app := app.NewApp()
 	app.SetupRouter()
+	app.SetupDatabase()
 	app.Run()
 }

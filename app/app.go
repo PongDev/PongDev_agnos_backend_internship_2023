@@ -3,6 +3,7 @@ package app
 import (
 	"os"
 
+	"github.com/PongDev/PongDev_agnos_backend_internship_2023/models"
 	"github.com/PongDev/PongDev_agnos_backend_internship_2023/routes"
 	"github.com/gin-gonic/gin"
 )
@@ -25,6 +26,10 @@ func NewApp() *App {
 
 func (app *App) SetupRouter() {
 	routes.SetupRouter(app.engine)
+}
+
+func (app *App) SetupDatabase() {
+	models.ConnectDatabase()
 }
 
 func (app *App) Run() {

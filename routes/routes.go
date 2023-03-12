@@ -12,6 +12,6 @@ func SetupRouter(r *gin.Engine) {
 
 	apiRouterGroup := r.Group("/api")
 	{
-		apiRouterGroup.GET("/strong_password_steps", apiRouter.PostPasswordRecommendationStep())
+		apiRouterGroup.POST("/strong_password_steps", apiRouter.PostPasswordRecommendationStep())
 	}
 }
