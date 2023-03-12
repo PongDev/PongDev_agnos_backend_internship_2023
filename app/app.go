@@ -23,10 +23,10 @@ func NewApp() *App {
 	return app
 }
 
-func (app App) SetupRouter() {
+func (app *App) SetupRouter() {
 	routes.SetupRouter(app.engine)
 }
 
-func (app App) Run() {
+func (app *App) Run() {
 	app.engine.Run()
 }
